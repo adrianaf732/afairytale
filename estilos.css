@@ -1,0 +1,1799 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --crema: #f2e2c7;
+    --crema-claro: #f7ecd8;
+
+    --verde: #33483d;
+    --verde-oscuro: #25362f;
+
+    --rosa: #c9878d;
+    --rosa-claro: #dfa6aa;
+
+    --cafe: #4d4038;
+
+    --texto: #463b34;
+
+    --blanco: #fffaf1;
+
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color: var(--texto);
+
+    background:
+        var(--crema);
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+p {
+
+    line-height: 1.5;
+
+}
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(244, 229, 203, 0.94);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom:
+        1px solid rgba(80, 63, 52, 0.2);
+
+}
+
+
+.navbar {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    height: 75px;
+
+    padding: 0 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.nav-links a {
+
+    font-size: 17px;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--rosa);
+
+}
+
+
+.boton-menu {
+
+    padding:
+        11px 25px;
+
+    border-radius:
+        30px;
+
+    background:
+        var(--rosa);
+
+    color:
+        white;
+
+    font-size:
+        16px;
+
+    transition:
+        0.3s;
+
+}
+
+
+.boton-menu:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        #b8737b;
+
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height:
+        760px;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    background-image:
+        url("../img/portada.jpg");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    padding:
+        140px 9% 90px;
+
+}
+
+
+.hero-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(247, 236, 216, 0.95) 0%,
+            rgba(247, 236, 216, 0.70) 36%,
+            rgba(247, 236, 216, 0.06) 70%
+        );
+
+}
+
+
+.hero-contenido {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        600px;
+
+}
+
+
+.estrella-grande {
+
+    font-size:
+        38px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            65px,
+            8vw,
+            115px
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        0.85;
+
+    margin:
+        15px 0;
+
+    letter-spacing:
+        -3px;
+
+}
+
+
+.subtitulo {
+
+    color:
+        #a96c74;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size:
+        14px;
+
+    letter-spacing:
+        8px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.hero h2 {
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.hero p {
+
+    font-size:
+        18px;
+
+    max-width:
+        530px;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.boton {
+
+    display:
+        inline-flex;
+
+    gap:
+        15px;
+
+    align-items:
+        center;
+
+    background:
+        var(--rosa);
+
+    color:
+        white;
+
+    padding:
+        14px 30px;
+
+    border-radius:
+        35px;
+
+    font-size:
+        18px;
+
+    box-shadow:
+        0 7px 20px
+        rgba(113, 72, 74, 0.20);
+
+    transition:
+        0.3s;
+
+}
+
+
+.boton:hover {
+
+    transform:
+        translateY(-4px);
+
+    background:
+        #b97880;
+
+}
+
+
+.frase-portada {
+
+    position:
+        absolute;
+
+    z-index:
+        2;
+
+    right:
+        7%;
+
+    top:
+        43%;
+
+    color:
+        #5a4940;
+
+    font-size:
+        25px;
+
+    font-style:
+        italic;
+
+    text-align:
+        center;
+
+    transform:
+        rotate(-6deg);
+
+}
+
+
+
+/* =========================================
+   SECCIONES GENERALES
+========================================= */
+
+.seccion-clara {
+
+    background-color:
+        var(--crema-claro);
+
+}
+
+
+.titulo-seccion {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.titulo-seccion.izquierda {
+
+    justify-content:
+        flex-start;
+
+}
+
+
+.titulo-seccion h2 {
+
+    font-size:
+        42px;
+
+    font-weight:
+        500;
+
+}
+
+
+.titulo-seccion span {
+
+    font-size:
+        21px;
+
+}
+
+
+
+/* =========================================
+   HISTORIA
+========================================= */
+
+.historia {
+
+    position:
+        relative;
+
+    padding:
+        80px 7%;
+
+    background-image:
+
+        radial-gradient(
+            rgba(105, 86, 68, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        18px 18px;
+
+}
+
+
+.historia-grid {
+
+    max-width:
+        1450px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1.15fr 0.85fr;
+
+    gap:
+        55px;
+
+    align-items:
+        center;
+
+}
+
+
+.historia-texto h3 {
+
+    font-size:
+        38px;
+
+    font-weight:
+        500;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.historia-texto p {
+
+    font-size:
+        19px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.historia-imagen img {
+
+    width:
+        100%;
+
+    height:
+        420px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        10px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(54, 44, 37, 0.16);
+
+}
+
+
+.objetivo {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    margin-bottom:
+        15px;
+
+    font-size:
+        18px;
+
+}
+
+
+.objetivo-icono {
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    flex:
+        0 0 43px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--rosa);
+
+    color:
+        white;
+
+}
+
+
+
+/* =========================================
+   FAIRY
+========================================= */
+
+.fairy-seccion {
+
+    background:
+        var(--verde);
+
+    color:
+        var(--crema-claro);
+
+    padding:
+        70px 6%;
+
+}
+
+
+.fairy-contenedor {
+
+    max-width:
+        1500px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr 1fr;
+
+    gap:
+        55px;
+
+    align-items:
+        center;
+
+}
+
+
+.fairy-principal {
+
+    height:
+        520px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    justify-content:
+        center;
+
+}
+
+
+.fairy-principal img {
+
+    max-height:
+        100%;
+
+    object-fit:
+        contain;
+
+}
+
+
+.fairy-titulo {
+
+    justify-content:
+        flex-start;
+
+}
+
+
+.fairy-info h3 {
+
+    font-size:
+        29px;
+
+    font-weight:
+        400;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.fairy-info p {
+
+    font-size:
+        19px;
+
+    margin-bottom:
+        17px;
+
+    color:
+        #efe2cb;
+
+}
+
+
+.etiquetas {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+
+}
+
+
+.etiquetas span {
+
+    color:
+        var(--texto);
+
+    background:
+        var(--crema);
+
+    padding:
+        7px 15px;
+
+    border-radius:
+        25px;
+
+    font-size:
+        14px;
+
+}
+
+
+.frase-fairy {
+
+    font-size:
+        23px;
+
+    text-align:
+        center;
+
+    font-style:
+        italic;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.polaroids {
+
+    display:
+        flex;
+
+    gap:
+        10px;
+
+}
+
+
+.polaroid {
+
+    flex:
+        1;
+
+    background:
+        #f1e6d3;
+
+    padding:
+        10px 10px 35px;
+
+    box-shadow:
+        0 8px 18px
+        rgba(0,0,0,0.23);
+
+    transform:
+        rotate(-3deg);
+
+}
+
+
+.polaroid:nth-child(2) {
+
+    transform:
+        rotate(3deg)
+        translateY(8px);
+
+}
+
+
+.polaroid:nth-child(3) {
+
+    transform:
+        rotate(-1deg);
+
+}
+
+
+.polaroid img {
+
+    width:
+        100%;
+
+    height:
+        250px;
+
+    object-fit:
+        contain;
+
+}
+
+
+
+/* =========================================
+   REINO
+========================================= */
+
+.reino {
+
+    padding:
+        75px 7%;
+
+}
+
+
+.encabezado-reino {
+
+    max-width:
+        1400px;
+
+    margin:
+        0 auto 40px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1.4fr;
+
+    gap:
+        50px;
+
+    align-items:
+        center;
+
+}
+
+
+.encabezado-reino p {
+
+    font-size:
+        18px;
+
+}
+
+
+.lugares {
+
+    max-width:
+        1400px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+
+}
+
+
+.lugar {
+
+    text-align:
+        center;
+
+}
+
+
+.lugar-imagen {
+
+    height:
+        280px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        10px;
+
+}
+
+
+.lugar img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        0.6s;
+
+}
+
+
+.lugar:hover img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.lugar h3 {
+
+    font-size:
+        18px;
+
+    letter-spacing:
+        1px;
+
+    font-weight:
+        500;
+
+    margin-top:
+        12px;
+
+}
+
+
+
+/* =========================================
+   ACTORES
+========================================= */
+
+.actores {
+
+    padding:
+        25px 5% 80px;
+
+}
+
+
+.actores-grid {
+
+    max-width:
+        1500px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    border:
+        1px solid
+        rgba(91, 71, 55, 0.22);
+
+}
+
+
+.personajes,
+.enemigos {
+
+    padding:
+        45px;
+
+}
+
+
+.personajes {
+
+    border-right:
+        1px solid
+        rgba(91, 71, 55, 0.22);
+
+}
+
+
+.personajes-grid,
+.enemigos-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        20px;
+
+}
+
+
+.personaje {
+
+    text-align:
+        center;
+
+}
+
+
+.personaje-imagen {
+
+    width:
+        135px;
+
+    height:
+        135px;
+
+    border-radius:
+        50%;
+
+    margin:
+        auto;
+
+    overflow:
+        hidden;
+
+    background:
+        #dbcbb2;
+
+}
+
+
+.personaje img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+}
+
+
+.personaje h3 {
+
+    font-size:
+        21px;
+
+    margin:
+        15px 0 8px;
+
+}
+
+
+.personaje p {
+
+    font-size:
+        16px;
+
+}
+
+
+.enemigos-intro {
+
+    margin:
+        -10px 0 30px;
+
+}
+
+
+.enemigo {
+
+    text-align:
+        center;
+
+}
+
+
+.enemigo img {
+
+    height:
+        190px;
+
+    width:
+        100%;
+
+    object-fit:
+        contain;
+
+}
+
+
+.enemigo h3 {
+
+    margin-top:
+        15px;
+
+    font-size:
+        20px;
+
+}
+
+
+
+/* =========================================
+   GAMEPLAY
+========================================= */
+
+.gameplay {
+
+    padding:
+        70px 7%;
+
+    border-top:
+        1px solid
+        rgba(91, 71, 55, 0.15);
+
+}
+
+
+.mecanicas-grid {
+
+    max-width:
+        1200px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        40px;
+
+}
+
+
+.mecanica {
+
+    display:
+        flex;
+
+    gap:
+        25px;
+
+}
+
+
+.mecanica-icono {
+
+    width:
+        75px;
+
+    height:
+        75px;
+
+    flex:
+        0 0 75px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        #d9c7a9;
+
+    border-radius:
+        50%;
+
+    font-size:
+        32px;
+
+}
+
+
+.mecanica h3 {
+
+    font-size:
+        25px;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.mecanica li,
+.mecanica p {
+
+    font-size:
+        18px;
+
+    line-height:
+        1.7;
+
+}
+
+
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.galeria {
+
+    padding:
+        65px 7% 90px;
+
+}
+
+
+.galeria-grid {
+
+    max-width:
+        1200px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+
+}
+
+
+.imagen-galeria {
+
+    height:
+        260px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        8px;
+
+}
+
+
+.imagen-galeria img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        0.5s;
+
+}
+
+
+.imagen-galeria:hover img {
+
+    transform:
+        scale(1.07);
+
+}
+
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final {
+
+    min-height:
+        250px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    background:
+
+        linear-gradient(
+            rgba(37, 54, 47, 0.88),
+            rgba(37, 54, 47, 0.88)
+        ),
+
+        url("../img/bosque.jpg");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    color:
+        var(--crema-claro);
+
+}
+
+
+.final-contenido {
+
+    width:
+        100%;
+
+    max-width:
+        1000px;
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        50px;
+
+}
+
+
+.final h2 {
+
+    font-size:
+        45px;
+
+    font-weight:
+        400;
+
+}
+
+
+.final p {
+
+    font-size:
+        19px;
+
+}
+
+
+.boton-grande {
+
+    font-size:
+        20px;
+
+    padding:
+        17px 35px;
+
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background:
+        var(--crema-claro);
+
+    padding:
+        45px 6% 25px;
+
+}
+
+
+.footer-contenido {
+
+    max-width:
+        1400px;
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+}
+
+
+.footer-logo {
+
+    font-size:
+        24px;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.footer-links {
+
+    display:
+        flex;
+
+    gap:
+        25px;
+
+}
+
+
+.footer-links a:hover {
+
+    color:
+        var(--rosa);
+
+}
+
+
+.redes {
+
+    display:
+        flex;
+
+    gap:
+        15px;
+
+    font-size:
+        22px;
+
+}
+
+
+.copyright {
+
+    margin-top:
+        30px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        rgba(70, 59, 52, 0.15);
+
+    text-align:
+        center;
+
+    font-size:
+        14px;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+
+    .nav-links {
+
+        display:
+            none;
+
+    }
+
+
+    .historia-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .objetivos {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .fairy-contenedor {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .fairy-vistas {
+
+        grid-column:
+            1 / -1;
+
+        max-width:
+            600px;
+
+        margin:
+            auto;
+
+    }
+
+
+    .actores-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .personajes {
+
+        border-right:
+            0;
+
+        border-bottom:
+            1px solid
+            rgba(91, 71, 55, 0.22);
+
+    }
+
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE CELULAR
+========================================= */
+
+@media (max-width: 750px) {
+
+
+    .navbar {
+
+        padding:
+            0 20px;
+
+    }
+
+
+    .boton-menu {
+
+        display:
+            none;
+
+    }
+
+
+    .hero {
+
+        padding:
+            120px 30px 70px;
+
+        min-height:
+            700px;
+
+        background-position:
+            65% center;
+
+    }
+
+
+    .hero-overlay {
+
+        background:
+
+            rgba(
+                247,
+                236,
+                216,
+                0.84
+            );
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            58px;
+
+    }
+
+
+    .subtitulo {
+
+        letter-spacing:
+            4px;
+
+    }
+
+
+    .frase-portada {
+
+        display:
+            none;
+
+    }
+
+
+    .historia-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .historia-imagen img {
+
+        height:
+            300px;
+
+    }
+
+
+    .fairy-contenedor {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .fairy-principal {
+
+        height:
+            400px;
+
+    }
+
+
+    .lugares {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .encabezado-reino {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .personajes-grid,
+    .enemigos-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .mecanicas-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .galeria-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .final-contenido {
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+        gap:
+            30px;
+
+    }
+
+
+    .footer-contenido {
+
+        flex-direction:
+            column;
+
+        gap:
+            25px;
+
+    }
+
+
+    .footer-links {
+
+        flex-wrap:
+            wrap;
+
+        justify-content:
+            center;
+
+    }
+
+
+}
