@@ -212,52 +212,22 @@ ul {
    HERO
 ========================================= */
 
+
 .hero {
+    min-height: 760px;
+    position: relative;
+    display: flex;
+    align-items: center;
 
-    min-height:
-        760px;
+    background: url("./fondo_inicio.png") center center / cover no-repeat !important;
 
-    position:
-        relative;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    background-image:
-        url("fondo_inicio.png");
-
-    background-size:
-        cover;
-
-    background-position:
-        center;
-
-    padding:
-        140px 9% 90px;
-
+    padding: 140px 9% 90px;
 }
 
 
+
 .hero-overlay {
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(247, 236, 216, 0.95) 0%,
-            rgba(247, 236, 216, 0.70) 36%,
-            rgba(247, 236, 216, 0.06) 70%
-        );
-
+    display: none;
 }
 
 
